@@ -1,0 +1,21 @@
+# ninja log v5
+0	67	1703969256468748542	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	e767297dfd465c11
+0	67	1703969256468748542	/Users/hollandsersen/Development/MagicTapeDeck/tests/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	e767297dfd465c11
+67	2288	1703969258689079048	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	94ecd23cf47ce17
+67	2288	1703969258689079048	/Users/hollandsersen/Development/MagicTapeDeck/tests/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	94ecd23cf47ce17
+2289	2440	1703969258841329297	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	415a60d70265b60f
+2289	2440	1703969258841329297	/Users/hollandsersen/Development/MagicTapeDeck/tests/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	415a60d70265b60f
+2440	2588	1703969258984593129	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	6f41945c9ce50972
+2440	2588	1703969258984593129	/Users/hollandsersen/Development/MagicTapeDeck/tests/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	6f41945c9ce50972
+2588	2739	1703969259139612219	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	479a496cc396dbba
+2588	2739	1703969259139612219	/Users/hollandsersen/Development/MagicTapeDeck/tests/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	479a496cc396dbba
+2740	2888	1703969259285153927	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	8ae430243d2bec41
+2740	2888	1703969259285153927	/Users/hollandsersen/Development/MagicTapeDeck/tests/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	8ae430243d2bec41
+2888	3027	1703969259427682248	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	6e105ce0e9460cb3
+2888	3027	1703969259427682248	/Users/hollandsersen/Development/MagicTapeDeck/tests/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	6e105ce0e9460cb3
+3028	3172	1703969259572190693	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	4ba5ca6f160e79f
+3028	3172	1703969259572190693	/Users/hollandsersen/Development/MagicTapeDeck/tests/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	4ba5ca6f160e79f
+3191	3348	1703969259747189074	CMakeFiles/googletest-populate-complete	1f872a74494af11b
+3191	3348	1703969259747189074	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	1f872a74494af11b
+3191	3348	1703969259747189074	/Users/hollandsersen/Development/MagicTapeDeck/tests/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	1f872a74494af11b
+3191	3348	1703969259747189074	/Users/hollandsersen/Development/MagicTapeDeck/tests/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	1f872a74494af11b

@@ -1,0 +1,9 @@
+# ninja log v5
+1	2956	1703969354101086294	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	3005f5759f208cfd
+1	3088	1703969354246110597	CMakeFiles/hello_test.dir/hello_test.cc.o	e2fdd65d6fd4a7e4
+1	6687	1703969357843510725	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	118b86762abea79a
+6688	6807	1703969357984648000	lib/libgtest.a	cbb41787cf97926c
+6807	6869	1703969358047031000	lib/libgtest_main.a	4e8461fcc2b017d6
+6870	7260	1703969358437383182	hello_test	7fa839eba0d6b290
+6870	7260	1703969358437383182	hello_test[1]_tests.cmake	7fa839eba0d6b290
+6870	7260	1703969358437383182	/Users/hollandsersen/Development/MagicTapeDeck/tests/cmake-build-debug/hello_test[1]_tests.cmake	7fa839eba0d6b290
