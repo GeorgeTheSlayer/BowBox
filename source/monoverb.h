@@ -6,7 +6,17 @@
 #define SOURCE_MONOVERB_H
 
 
-class monoverb {
+class Monoverb {
+    float sampleRate;
+
+public:
+    void Init( float SampleRate){
+        this->sampleRate = SampleRate;
+    }
+
+    float getSampleRate(){
+        return sampleRate;
+    }
 
 };
 

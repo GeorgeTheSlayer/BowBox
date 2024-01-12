@@ -1,3 +1,5 @@
 add_test([=[HelloTest.BasicAssertions]=]  /Users/hollandsersen/Development/MagicTapeDeck/tests/cmake-build-debug/hello_test [==[--gtest_filter=HelloTest.BasicAssertions]==] --gtest_also_run_disabled_tests)
 set_tests_properties([=[HelloTest.BasicAssertions]=]  PROPERTIES WORKING_DIRECTORY /Users/hollandsersen/Development/MagicTapeDeck/tests/cmake-build-debug SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set(  hello_test_TESTS HelloTest.BasicAssertions)
+add_test([=[MonoverbTest.Init]=]  /Users/hollandsersen/Development/MagicTapeDeck/tests/cmake-build-debug/hello_test [==[--gtest_filter=MonoverbTest.Init]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[MonoverbTest.Init]=]  PROPERTIES WORKING_DIRECTORY /Users/hollandsersen/Development/MagicTapeDeck/tests/cmake-build-debug SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  hello_test_TESTS HelloTest.BasicAssertions MonoverbTest.Init)
