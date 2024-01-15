@@ -2,6 +2,8 @@
 
 *This project was made for the 2023 Synthmas Contest. No code was used from any other projects.*
 
+![IMG_0485](https://github.com/GeorgeTheSlayer/BowBox/assets/31327906/d44d419b-ee28-43bc-ac2c-f9ed7c3f1381)
+
 Inspired by the Flatbox design. The Bow Box is a simple synthesizer, capable of playing 6 voices at the same time. The algorithm was custom made. It uses tuned waveguides and modal synthesis to create the desired sound. It needs minimal parts and has a simple schematic. The enclosure is easily 3d printable and customizable. 
 
 ## Project Goals
