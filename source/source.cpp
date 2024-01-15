@@ -1,7 +1,7 @@
 #include "daisy_seed.h"
 #include "daisysp.h"
 #include "magictape_lib.h"
-#include "singingbowl.h"
+#include "BowBox.h"
 
 constexpr u_int8_t NUM_BOWLS = 6;
 
@@ -10,7 +10,7 @@ using namespace daisy;
 using namespace daisysp;
 
 DaisySeed hw;
-SingingBowl Bowls[NUM_BOWLS];
+BowedString Bowls[NUM_BOWLS];
 Mpr121I2C TouchPads;
 uint16_t touchState;
 uint16_t touchOutL, touchOutR, lastTL, lastTR;
@@ -26,7 +26,7 @@ Port lPort, rPort;
 float lAmp, rAmp;
 
 
-float bowlFreqs[] = {110.f, 392.f, 492.f, 330.f, 350.6, 117.3f};
+float bowlFreqs[] = {110.f, 117.3f, 176, 330.f, 350.6, 392.f};
 Switch buttons[NUM_BOWLS];
 
 // Easier to debounce them like this. I'd rather not use a for loop for simple logic like this
@@ -46,7 +46,7 @@ void setADSR(float SR) {
         i.SetAttackTime(0.125f);
         i.SetDecayTime(0.1255f);
         i.SetSustainLevel(1.f);
-        i.SetReleaseTime(0.125f);
+        i.SetReleaseTime(1.f);
     }
 }
 
@@ -62,29 +62,10 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
     debounceButtons();
 
 
-
-//    if(lastTL != touchOutL){
-//        lPort.Process(float (lastTL) * 0.25f, float(touchOutL) * .25f, 0.125f);
-//    }
-//
-//    if(lastTR != touchOutR){
-//        simpleLineR.Start(float (lastTR) * 0.25f, float(touchOutR) * .25f, 0.125f);
-//    }
-//
-//    lastTL = touchOutL;
-//    lastTR = touchOutR;
-
     lAmp = float(touchOutL) * .25f;
     rAmp = float(touchOutR) * .25f;
 
 
-
-//    for (int i = 0; i < 16; i++) {
-//        if((touchState & 0x8000) >> 15 == 1){
-//            touchOut = i + 1;
-//        }
-//        touchState <<= 1;
-//    }
 
     for (size_t i = 0; i < size; i++) {
         // Create Filtered Noise
@@ -109,22 +90,22 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
         // Process Resonantors. AVoid using for loop inside For loop.
         // Close encounters of the third kind
         float output = Bowls[0].Process(
-                filteredNoise[0] * sineOut * simpleEnv[0].Process(buttons[0].Pressed()) * lPortOut);
+                filteredNoise[0] *  simpleEnv[0].Process(buttons[0].Pressed()) * lPortOut );
         output += Bowls[1].Process(
-                filteredNoise[1] * sineOut * simpleEnv[1].Process(buttons[1].Pressed()) * lPortOut);
+                filteredNoise[1] *  simpleEnv[1].Process(buttons[1].Pressed()) * lPortOut );
         output += Bowls[2].Process(
-                filteredNoise[2] * sineOut * simpleEnv[2].Process(buttons[2].Pressed()) * lPortOut);
+                filteredNoise[2] *  simpleEnv[2].Process(buttons[2].Pressed()) * lPortOut );
         output += Bowls[3].Process(
-                filteredNoise[3] * sineOut * simpleEnv[3].Process(buttons[3].Pressed()) * rPortOut);
+                filteredNoise[3] *  simpleEnv[3].Process(buttons[3].Pressed()) * rPortOut );
         output += Bowls[4].Process(
-                filteredNoise[4] * sineOut * simpleEnv[4].Process(buttons[4].Pressed()) * rPortOut);
+                filteredNoise[4] *  simpleEnv[4].Process(buttons[4].Pressed()) * rPortOut );
         output += Bowls[5].Process(
-                filteredNoise[5] * sineOut * simpleEnv[5].Process(buttons[5].Pressed()) * rPortOut);
+                filteredNoise[5] *  simpleEnv[5].Process(buttons[5].Pressed()) * rPortOut );
 
 
         // Set the Output to the Bowls
-        out[0][i] = output;
-        out[1][i] = output;
+        out[0][i] = output * 0.16666f;
+        out[1][i] = output * 0.16666f;
     }
 }
 
@@ -160,17 +141,17 @@ int main(void) {
     LowpassOut.Init(hw.AudioSampleRate());
     LowpassOut.SetFreq(492.f * 2.0f);
 
-    ExciterTable.Init(0, 0.75, 0, 1);
+    ExciterTable.Init(0, 0.5, 0, 1);
 
     TouchPads.Init(Mpr121<Mpr121I2CTransport>::Config());
-    lPort.Init(hw.AudioSampleRate(), 0.15f);
-    rPort.Init(hw.AudioSampleRate(), 0.15f);
+    lPort.Init(hw.AudioSampleRate(), 0.125f);
+    rPort.Init(hw.AudioSampleRate(), 0.125f);
 
 
     SineWave.Init(hw.AudioSampleRate());
     SineWave.SetWaveform(daisysp::Oscillator::WAVE_SIN);
     SineWave.SetFreq(0.25f);
-    auto isTouched = false;
+
     while (1) {
 //        buttons[3].Debounce();
         hw.SetLed(TouchPads.Touched());

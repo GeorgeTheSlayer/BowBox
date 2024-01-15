@@ -2,8 +2,7 @@
 // Created by Holland Sersen on 12/30/23.
 //
 
-#ifndef SOURCE_SINGINGBOWL_H
-#define SOURCE_SINGINGBOWL_H
+#pragma once
 #include "daisysp.h"
 #include <cmath>
 #include "CanonicalFirstOrderFilters.h"
@@ -163,7 +162,7 @@ public:
     }
 };
 
-class SingingBowl {
+class BowedString {
 // Init Values
     float sampleRate = 0.0f;
     float frequency = 0.0f;
@@ -224,4 +223,4 @@ public:
     }
 
 };
-#endif //SOURCE_SINGINGBOWL_H
+

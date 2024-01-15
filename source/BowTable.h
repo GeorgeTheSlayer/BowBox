@@ -21,10 +21,10 @@ struct BowTable {
 
     //TODO: Get Refersence. Taken from STK
     float Process(float input){
-        auto sample = input + offset;
+        float sample = input + offset;
         sample *= slope;
 
-        auto output = fabs(sample + 0.75);
+        float output = fabs(sample + 0.75);
         output = pow(output, -4.0f);
 
         if (output < minOutput)

@@ -4,6 +4,6 @@
 
 #pragma once
 #include "CanonicalFirstOrderFilters.h"
-#include "singingbowl.h"
+#include "BowBox.h"
 #include "BowTable.h"
 

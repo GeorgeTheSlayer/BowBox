@@ -246,7 +246,7 @@ build/source.o: source.cpp \
  ../DaisyExamples/DaisySP//Source/Utility/port.h \
  ../DaisyExamples/DaisySP//Source/Utility/samplehold.h \
  ../DaisyExamples/DaisySP//Source/Utility/smooth_random.h magictape_lib.h \
- CanonicalFirstOrderFilters.h singingbowl.h BowTable.h
+ CanonicalFirstOrderFilters.h BowBox.h BowTable.h
 ../DaisyExamples/libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../DaisyExamples/libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../DaisyExamples/libDaisy//Drivers/CMSIS/Include/core_cm7.h:
@@ -496,5 +496,5 @@ build/source.o: source.cpp \
 ../DaisyExamples/DaisySP//Source/Utility/smooth_random.h:
 magictape_lib.h:
 CanonicalFirstOrderFilters.h:
-singingbowl.h:
+BowBox.h:
 BowTable.h:
