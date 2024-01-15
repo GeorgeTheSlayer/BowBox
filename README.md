@@ -53,5 +53,5 @@ I think 99% of all my time on this project was spent on the python. I spent a lo
 
 This part was fairly straight forward. Port over my python code, into CPP. There was some code I ended up not using. Like some code for some filters and some code to emulate a bow on a string. But other than that I am really happy with how it sounds.
 
-# I am avaible to work. Please contact at holland@sersen.net 
+# I am available to work. Please contact at holland@sersen.net 
 
