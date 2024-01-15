@@ -4,7 +4,9 @@
 
 ![IMG_0485](https://github.com/GeorgeTheSlayer/BowBox/assets/31327906/d44d419b-ee28-43bc-ac2c-f9ed7c3f1381)
 
-Inspired by the Flatbox design. The Bow Box is a simple synthesizer, capable of playing 6 voices at the same time. The algorithm was custom made. It uses tuned waveguides and modal synthesis to create the desired sound. It needs minimal parts and has a simple schematic. The enclosure is easily 3d printable and customizable. 
+Inspired by the Flatbox design, the Bow Box is a simple synthesizer capable of playing 6 voices at the same time.
+
+The algorithm was custom made. It uses tuned waveguides and modal synthesis to create the desired sound. It needs minimal parts and has a simple schematic. The enclosure is easily 3d printable and customizable. 
 
 ## Project Goals
 
@@ -17,7 +19,7 @@ The guidelines for the contest are available to here. Tl;dr: Create an open sour
 
 ## Ideation
 
-This idea came about from playing Street Fighter 6 the past couple of months. The idea being, what if I could take a leverless fight stick (a controller made for fighting games) and turn it into a musical instrument. 
+This idea came about from playing Street Fighter 6 the past couple of months. The idea being, what if I could take a lever less fight stick (a controller made for fighting games) and turn it into a musical instrument. 
 
 At first I thought that it could maybe be a group box or looper of some sort. The idea being that the user would have to input commands in order to get certain functions from the synthesizer. I made many quick sketches of this idea, but ultimately decided that it would be A. To much to implement in 2 weeks, B. It goes against what makes these controllers so good in the first place. 
 
@@ -36,23 +38,17 @@ Finally I made the touch sensitive parts be square. That way it is easily ascert
 
 The schematic for this is reality straight forward. The Six buttons are all wired into their own channel. And the touch sensors are communicating with the Seed through i2c. Finally all the audio comes out of the main audio outputs. 
 
-**Could I have made it into a button matrix? Yes. Do I need to for this simple version? No.** 
-
 For the sake of the current project, keeping everything simple is best. It is most important to make a basic working version of my idea rather than to have one part of my idea be perfect. 
 
 ## Python
 
 Oh boy this was hard. 
 
-I think 99% of all my time on this project was spent on the python. I spent a lot of time trying to get a very clean sound but I was unable to. Although I have made a lot of effects/synthesizers, I have never made a physically modled instrument. I spent a lot of time looking through Julius Orion Smith III's research and it is incredible! Truthfully if I could I would love to be able to keep working on this project and make it better.
-
-If you want to go through my awful python code then go ahead! It is teriblly optomized, but that is fine. I used it entirely as a reference so that I can port it all over to CPP.
+I think 99% of all my time on this project was spent on the python. I spent a lot of time trying to get a very clean sound but I was unable to. Although I have made a lot of effects/synthesizers, I have never made a physically modeled instrument. I spent a lot of time looking through Julius Orion Smith III's research and it is incredible! Truthfully if I could I would love to be able to keep working on this project and make it better.
 
 ## CPP
 
 This part was fairly straight forward. Port over my python code, into CPP. There was some code I ended up not using. Like some code for some filters and some code to emulate a bow on a string. But other than that I am really happy with how it sounds.
-
-Maybe in another version I'll make it so people can change the pitch of the instrument on the fly. I don't think that would be too difficult to do. However, I also thought physical modling wouldn't be that bad either!
 
 # I am avaible to work. Please contact at holland@sersen.net 
 
