@@ -12,7 +12,6 @@ Inspired by the Flatbox design. The Bow Box is a simple synthesizer, capable of 
 
 The guidelines for the contest are available to here. Tl;dr: Create an open source synthesizer/effect using the Daisy and the MPR121 touch sensor with a demo video.
 
-# I am avaible to work. Please contact at holland@sersen.net 
 
 ## Ideation
 
@@ -53,4 +52,5 @@ This part was fairly straight forward. Port over my python code, into CPP. There
 
 Maybe in another version I'll make it so people can change the pitch of the instrument on the fly. I don't think that would be too difficult to do. However, I also thought physical modling wouldn't be that bad either!
 
+# I am avaible to work. Please contact at holland@sersen.net 
 
